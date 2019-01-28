@@ -1,0 +1,145 @@
+.hero {
+  height: 700px;
+  max-height: 100vh;
+  padding-top: 40px;
+  font-family: 'Marck Script', cursive;
+  color: #fff;
+  background-image: url('./bridge.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.hero__title {
+  position: relative;
+  width: 280px;
+  height: 181px;
+  margin: auto;
+  background-color: rgba(8,47,110,0.6);
+  border: 8px solid #fff;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) {
+  .hero__title {
+    width: calc(17.5rem + ((1vw - 3.2px) * 59.697));
+    height: calc(11.3125rem + ((1vw - 3.2px) * 37.8788));
+  }
+}
+
+@media (min-width: 40.625rem) {
+  .hero__title {
+    width: 477px;
+    height: 306px;
+  }
+}
+
+.hero__big-letter {
+  font-size: 140px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+/* 188px @ 375px increasing to 250px @ 650px */
+@media (min-width: 20rem) {
+  .hero__big-letter {
+    font-size: calc(8.75rem + ((1vw - 3.2px) * 33.3333));
+  }
+}
+
+@media (min-width: 40.625rem) {
+  .hero__big-letter {
+    font-size: 250px;
+  }
+}
+
+/* Ratio should be 56/288 */
+.hero__small-letters {
+  display: inline-block;
+  margin-left: -10px;
+  font-size: 27px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+/* 20px @ 375px increasing to 27px @ 650px */
+@media (min-width: 20rem) {
+  .hero__small-letters {
+    margin-left: calc(-0.625rem + ((1vw - 3.2px) * -3.3333));
+    font-size: calc(1.6875rem + ((1vw - 3.2px) * 6.6667));
+  }
+}
+
+@media (min-width: 40.625rem) {
+  .hero__small-letters {
+    margin-left: -21px;
+    font-size: 49px;
+  }
+}
+
+/* Ratio should be 56/288 */
+.hero__and {
+  position: absolute;
+  top: 100px;
+  left: 159px;
+  font-size: 27px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+@media (min-width: 20rem) {
+  .hero__and {
+    top: calc(6.25rem + ((1vw - 3.2px) * 21.8182));
+    left: calc(9.9375rem + ((1vw - 3.2px) * 34.2424));
+    font-size: calc(1.6875rem + ((1vw - 3.2px) * 6.6667));
+  }
+}
+
+@media (min-width: 40.625rem) {
+  .hero__and {
+    top: 172px;
+    left: 272px;
+    font-size: 49px;
+  }
+}
+
+.hero__first-name {
+  position: absolute;
+  display: block;
+  top: -14px;
+  left: 13px;
+}
+
+@media (min-width: 20rem) {
+  .hero__first-name {
+    top: calc(-0.875rem + ((1vw - 3.2px) * -6.0606));
+    left: calc(0.8125rem + ((1vw - 3.2px) * 0.6061));
+  }
+}
+
+@media (min-width: 40.625rem) {
+  .hero__first-name {
+    top: -34px;
+    left: 15px;
+  }
+}
+
+.hero__second-name {
+  position: absolute;
+  display: block;
+  top: 29px;
+  left: 146px;
+}
+
+@media (min-width: 20rem) {
+  .hero__second-name {
+    top: calc(1.8125rem + ((1vw - 3.2px) * 4.5455));
+    left: calc(9.125rem + ((1vw - 3.2px) * 30.9091));
+  }
+}
+
+@media (min-width: 40.625rem) {
+  .hero__second-name {
+    top: 44px;
+    left: 248px;
+  }
+}
+
+
