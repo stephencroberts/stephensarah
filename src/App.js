@@ -52,6 +52,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // Debounce resize event with requestAnimationFrame
     let timeout;
     window.addEventListener('resize', () => {
       if (timeout) window.cancelAnimationFrame(timeout);
@@ -80,7 +81,7 @@ class App extends Component {
     let vh;
     const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (window.screen
-        && window.screen.width - window.innerWidth < 5
+        && window.screen.width - window.innerWidth < 20
         && window.screen.height - window.innerHeight < 200) {
       vh = window.screen.height;
     } else {
