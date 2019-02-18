@@ -39,4 +39,7 @@ module.exports = {
       template: 'index.html',
     }),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };
