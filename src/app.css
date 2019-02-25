@@ -5,6 +5,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  line-height: 1.618em;
 }
 
 a {
@@ -18,11 +19,13 @@ a {
   background-color: #fff;
 }
 
-.content {
-  position: relative;
-  z-index: 200;
-  box-sizing: border-box;
-  padding: 10px 10px 30px 10px;
-  background-color: #fff;
+.section--full-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section--dark {
+  background-color: #006485;
+  color: #fff;
 }
 

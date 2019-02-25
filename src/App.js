@@ -16,11 +16,11 @@ class App extends Component {
         <Hero />
         <main>
           { features.engagement &&
-          <div>
+          <div className="section section--full-width">
             <Engagement />
           </div>
           }
-          <article className="content">
+          <article className="section">
             <p>More <strong><em>amazing</em></strong> website coming soon, but here are the important details for now:</p>
             <h3>Ceremony & Reception</h3>
             <p>Our wedding is on Saturday, September 7 at 4:00 p.m. at Our Savior's Way Lutheran Church, 43115 Waxpool Road, Ashburn, Virginia  20148.</p>
