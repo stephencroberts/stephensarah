@@ -1,5 +1,5 @@
 const ALL_FEATURES = {
-  proposal: false,
+  proposal: true,
 };
 
 const features = {
