@@ -27,11 +27,11 @@ class Proposal extends Component {
             his phone as a camera, and began watching for Sarah to come down. His
             hands trembling so much he could barely open the ring box, he saw Sarah,
             gave her an awkward wave, and trying to remember which knee to put down,
-            he succeeded, asking Sarah to marry him!
+            well...
           </p>
         </div>
 
-        <p>If a picture is worth a thousand words, then a video is worth a
+        <p>if a picture is worth a thousand words, then a video is worth a
       million...
         </p>
         <video className="proposal__video" controls poster={poster}>
