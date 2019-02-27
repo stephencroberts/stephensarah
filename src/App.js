@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import features from './features';
 
 import Hero from './hero';
-import Engagement from './engagement';
+import Proposal from './proposal';
 import Footer from './footer';
 
 import './normalize.css';
@@ -15,9 +15,9 @@ class App extends Component {
       <>
         <Hero />
         <main>
-          { features.engagement &&
+          { features.proposal &&
           <div className="section section--full-width">
-            <Engagement />
+            <Proposal />
           </div>
           }
           <article className="section">

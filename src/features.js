@@ -1,5 +1,5 @@
 const ALL_FEATURES = {
-  engagement: false,
+  proposal: false,
 };
 
 const features = {
@@ -12,8 +12,8 @@ const features = {
       }
     }
   },
-  get engagement() {
-    return this.currentFeatures.engagement;
+  get proposal() {
+    return this.currentFeatures.proposal;
   },
 };
 
