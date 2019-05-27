@@ -1,0 +1,40 @@
+.travel__details {
+  margin-left: 20px;
+}
+
+.travel__airports {
+  display: block;
+  text-align: center;
+}
+
+.travel__airport {
+  max-width: 400px;
+}
+
+.map--travel {
+  width: 100%;
+  height: 100vw;
+  max-width: 400px;
+  max-height: 400px;
+  margin: auto;
+}
+
+.transportation__section {
+  margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .travel__airports {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .travel__airport {
+    margin: 10px;
+  }
+
+  .map--travel {
+    width: 40vw;
+    height: 40vw;
+  }
+}

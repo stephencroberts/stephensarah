@@ -12,16 +12,59 @@ a {
   word-wrap: break-word;
 }
 
-.section {
-  position: relative;
-  z-index: 200;
-  padding: 10px 10px 30px 10px;
-  background-color: #fff;
+h3 {
 }
 
-.section--full-width {
+.section {
+  padding: 10px 10px 30px 10px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 20rem) {
+  h2 {
+    font-size: calc(3rem + ((1vw - 0.75rem) * 1.8182));
+  }
+
+  h3 {
+    font-size: calc(2rem + ((1vw - 0.75rem) * 0.9091));
+  }
+}
+
+@media (min-width: 75rem) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+.wrapper--full-width {
+  position: relative;
+  z-index: 200;
   padding-left: 0;
   padding-right: 0;
+}
+
+.wrapper--full-width:nth-child(odd) {
+  background-color: #DAE4F0;
+}
+
+.wrapper--full-width:nth-child(even) {
+  background-color: #eee;
 }
 
 .section--dark {

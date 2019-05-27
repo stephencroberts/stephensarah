@@ -1,5 +1,6 @@
 const ALL_FEATURES = {
   proposal: true,
+  travel: false,
 };
 
 const features = {
@@ -14,6 +15,9 @@ const features = {
   },
   get proposal() {
     return this.currentFeatures.proposal;
+  },
+  get travel() {
+    return this.currentFeatures.travel;
   },
 };
 
