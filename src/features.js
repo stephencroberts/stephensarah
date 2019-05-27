@@ -1,6 +1,6 @@
 const ALL_FEATURES = {
   proposal: true,
-  travel: false,
+  travel: true,
 };
 
 const features = {
