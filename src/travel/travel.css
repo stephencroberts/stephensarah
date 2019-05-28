@@ -1,5 +1,5 @@
-.travel__details {
-  margin-left: 20px;
+.travel h3 {
+  text-align: center;
 }
 
 .travel__airports {
@@ -17,10 +17,6 @@
   max-width: 400px;
   max-height: 400px;
   margin: auto;
-}
-
-.transportation__section {
-  margin-left: 20px;
 }
 
 @media (min-width: 768px) {

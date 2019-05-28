@@ -10,7 +10,7 @@ const Airports = () => <>
     <div className="travel__airports">
       <div className="travel__airport">
         <h4>
-          <a href="https://flydulles.com/iad/dulles-international-airport">Dulles International</a> (15 minutes from the hotels)
+          <a href="https://flydulles.com/iad/dulles-international-airport">Dulles International</a><br />(15 minutes from the hotels)<br /><br />
         </h4>
         <div className="map map--travel">
           <iframe
@@ -25,7 +25,7 @@ const Airports = () => <>
       </div>
       <div className="travel__airport">
         <h4>
-          <a href="https://www.flyreagan.com/dca/reagan-national-airport">Ronald Reagan Washington National</a> (40 minutes or MUCH longer depending on traffic from the hotels)
+          <a href="https://www.flyreagan.com/dca/reagan-national-airport">Ronald Reagan Washington National</a><br />(40 minutes or MUCH longer depending on traffic from the hotels)
         </h4>
         <div className="map map--travel">
           <iframe
