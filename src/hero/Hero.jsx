@@ -64,7 +64,7 @@ class Hero extends Component {
     // Set defaults
     const bg = { width: 1920, height: 1080, aspectRatio: 1920 / 1080 };
     const hero = { x: 0, minHeight: 'auto' };
-    const date = { x: 535, y: 40, scale: 1 };
+    const date = { x: 535, y: 80, scale: 0.8 };
     const stephen = { x: 500, y: 230, scale: 0.45 };
     const leftArrow = { x: 560, scale: 0.2, rotate: 40 };
     const sarah = { x: 840, y: 280, scale: 0.4 };
@@ -103,7 +103,7 @@ class Hero extends Component {
       if (vAspectRatio < BP4) {
         // Scale date size
         const dateWidth = scaleFactor * 500;
-        date.scale = constrain((vw - 40) / dateWidth, 0, 1);
+        date.scale = constrain((vw - 40) / dateWidth, 0, date.scale);
         date.x =  280 + (500 - date.scale * 500/ 2);
 
         // Pin our names to the left/right edges
@@ -128,7 +128,7 @@ class Hero extends Component {
     }
 
     if (vAspectRatio > BP2) {
-      date.scale = scale(1, BP2, 0.5, BP4, vAspectRatio);
+      date.scale = scale(date.scale, BP2, 0.5, BP4, vAspectRatio);
     }
 
     if (vAspectRatio >= BP3) {
@@ -161,7 +161,7 @@ class Hero extends Component {
 
   render() {
     return (
-      <div className="hero" ref={e => { this.heroWrapper = e; }}>
+      <div id="home" className="hero" ref={e => { this.heroWrapper = e; }}>
         <svg
           width="100%"
           height="100%"
@@ -177,7 +177,7 @@ class Hero extends Component {
 
           <svg
             x="535"
-            y="40"
+            y="80"
             width="500"
             height="177"
             viewBox="0 0 500 177"

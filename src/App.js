@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import features from './features';
 
+import Nav from './nav';
 import Hero from './hero';
 import Proposal from './proposal';
 import Travel from './travel';
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <Nav />
         <Hero />
         <main>
           { features.proposal &&
