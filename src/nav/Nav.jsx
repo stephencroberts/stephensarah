@@ -66,7 +66,7 @@ class Nav extends React.Component {
               <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#home">Home</a></li>
               <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#proposal">The Proposal</a></li>
               <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#travel">Travel & Transportation</a></li>
-              <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#accomodations">Accomodations</a></li>
+              <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#accommodations">Accommodations</a></li>
               <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#registry">Registry</a></li>
             </ul>
           </div>
