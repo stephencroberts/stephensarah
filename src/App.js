@@ -6,6 +6,7 @@ import Nav from './nav';
 import Hero from './hero';
 import Proposal from './proposal';
 import Travel from './travel';
+import Registry from './registry';
 import Footer from './footer';
 
 import './normalize.css';
@@ -18,20 +19,21 @@ class App extends Component {
         <Nav />
         <Hero />
         <main>
-          { features.proposal &&
           <div className="wrapper--full-width">
             <div className="section">
               <Proposal />
             </div>
           </div>
-          }
-          { features.travel &&
           <div className="wrapper--full-width">
             <div className="section">
               <Travel />
             </div>
           </div>
-          }
+          <div className="wrapper--full-width">
+            <div className="section">
+              <Registry />
+            </div>
+          </div>
           <div className="wrapper--full-width">
             <article className="section">
               <h3>Ceremony & Reception</h3>
