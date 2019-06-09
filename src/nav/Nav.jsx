@@ -7,6 +7,7 @@ class Nav extends React.Component {
     super(props);
 
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.handleMenuItemClick = this.handleMenuItemClick.bind(this);
 
@@ -15,10 +16,25 @@ class Nav extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.addEventListener('click', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleClickOutside);
+  }
+
   toggleMenu() {
     this.setState((prevState) => ({
       open: !prevState.open,
     }));
+  }
+
+  handleClickOutside(e) {
+    const nav = document.getElementsByClassName('nav__wrapper')[0];
+    if (nav.contains(e.target) === false && this.state.open) {
+      this.toggleMenu();
+    }
   }
 
   handleMenuClick(e) {
