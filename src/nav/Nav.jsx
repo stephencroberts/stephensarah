@@ -6,17 +6,31 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
 
+    this.toggleMenu = this.toggleMenu.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.handleMenuItemClick = this.handleMenuItemClick.bind(this);
 
     this.state = {
       open: false,
     };
   }
 
-  handleMenuClick() {
+  toggleMenu() {
     this.setState((prevState) => ({
       open: !prevState.open,
     }));
+  }
+
+  handleMenuClick(e) {
+    this.toggleMenu();
+  }
+
+  handleMenuItemClick(e) {
+    e.preventDefault();
+    this.toggleMenu();
+    const anchorId = e.target.getAttribute('href').replace('#', '');
+    const anchor = document.getElementById(anchorId);
+    anchor.scrollIntoView({ behavior: 'smooth' });
   }
 
   render() {
@@ -30,9 +44,9 @@ class Nav extends React.Component {
           <input id="nav__checkbox" className="nav__checkbox" type="checkbox" checked={this.state.open} onChange={this.handleMenuClick} />
           <div className="nav__menu-wrapper">
             <ul className="nav__menu-items">
-              <li className="nav__menu-item" onClick={this.handleMenuClick}><a href="#home">Home</a></li>
-              <li className="nav__menu-item" onClick={this.handleMenuClick}><a href="#proposal">The Proposal</a></li>
-              <li className="nav__menu-item" onClick={this.handleMenuClick}><a href="#travel">Travel & Transportation</a></li>
+              <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#home">Home</a></li>
+              <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#proposal">The Proposal</a></li>
+              <li className="nav__menu-item"><a onClick={this.handleMenuItemClick} href="#travel">Travel & Transportation</a></li>
             </ul>
           </div>
         </div>
