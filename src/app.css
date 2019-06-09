@@ -22,6 +22,12 @@ h3 {
   margin-right: auto;
 }
 
+@media (min-width: 48rem) {
+  .section {
+    padding: 30px;
+  }
+}
+
 h2 {
   font-size: 2rem;
   text-align: center;

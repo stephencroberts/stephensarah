@@ -87,6 +87,17 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+@media (min-width: 48rem) {
+  .nav__quick-link {
+    margin: 10px 10px 10px 30px;
+  }
+
+  .nav__wrapper {
+    margin: 10px 30px 10px 10px;
+  }
+}
+
+
 /* @media (min-width: 400px) { */
 /*   .nav__wrapper { */
 /*     position: relative; */
