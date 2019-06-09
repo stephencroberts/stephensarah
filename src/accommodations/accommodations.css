@@ -1,0 +1,97 @@
+.accommodations__details-header {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.accommodations__details-value {
+  vertical-align: bottom;
+}
+
+.accommodations__hotels {
+  margin-top: 40px;
+}
+
+.accommodations__hotels * {
+  margin: auto;
+}
+
+.hotel {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .accommodations__hotels {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hotel {
+    width: 45%;
+  }
+}
+
+.hotel__link {
+  position: relative;
+  display: block;
+}
+
+.hotel__image {
+  width: 100%;
+}
+
+.hotel__caption {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.hotel__link .hotel__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.35s opacity ease-in-out;
+}
+
+.hotel__link:hover .hotel__overlay {
+  opacity: 1;
+}
+
+.hotel__address {
+  text-align: center;
+}
+
+.hotel__ctas {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around
+}
+
+.hotel__details,
+.hotel__book-now {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: gray;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hotel__details:hover,
+.hotel__book-now:hover {
+  text-decoration: underline;
+}
