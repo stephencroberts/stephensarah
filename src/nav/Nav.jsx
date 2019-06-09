@@ -1,6 +1,9 @@
 import React from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import './nav.css';
+
+smoothscroll.polyfill();
 
 class Nav extends React.Component {
   constructor(props) {
