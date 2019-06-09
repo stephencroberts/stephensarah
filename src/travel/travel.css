@@ -7,8 +7,12 @@
   text-align: center;
 }
 
+.travel__airports * {
+  margin: auto;
+}
+
 .travel__airport {
-  max-width: 400px;
+  margin-top: 40px;
 }
 
 .map--travel {
@@ -27,6 +31,7 @@
 
   .travel__airport {
     margin: 10px;
+    max-width: 400px;
   }
 
   .map--travel {
