@@ -78,13 +78,13 @@
   padding: 10px;
   left: 0;
   font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(75, 188, 175);
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
 }
 
 .nav__quick-link:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #32A396;
 }
 
 @media (min-width: 48rem) {
