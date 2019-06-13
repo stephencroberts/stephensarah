@@ -8,17 +8,34 @@ import Proposal from './proposal';
 import Travel from './travel';
 import Accommodations from './accommodations';
 import Registry from './registry';
+import Ceremony from './ceremony';
 import Footer from './footer';
+import Waypoint from './components/Waypoint';
 
 import './normalize.css';
 import './app.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isHeroVisible: true,
+    };
+
+    this.handleWaypointVisibility = this.handleWaypointVisibility.bind(this);
+  }
+
+  handleWaypointVisibility(isVisible) {
+    this.setState({ isHeroVisible: isVisible });
+  }
+
   render() {
     return (
       <>
-        <Nav />
+        <Nav isScrolled={!this.state.isHeroVisible} />
         <Hero />
+        <Waypoint onVisibilityChange={this.handleWaypointVisibility} />
         <main>
           <div className="wrapper--full-width">
             <div className="section">

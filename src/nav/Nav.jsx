@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import smoothscroll from 'smoothscroll-polyfill';
 
 import './nav.css';
@@ -53,9 +54,16 @@ class Nav extends React.Component {
   }
 
   render() {
+    const quickLinkClass = this.props.isScrolled
+      ? 'nav__quick-link nav__quick-link--scrolled'
+      : 'nav__quick-link';
     return (<div className="nav">
       <div className="nav__positioner">
-        <div className="nav__quick-link"><strong><a target="_blank" href="https://stephensarah.rsvpify.com">RSVP</a></strong></div>
+        <div className={quickLinkClass}>
+          <strong>
+            <a target="_blank" href="https://stephensarah.rsvpify.com">RSVP</a>
+          </strong>
+        </div>
         <div className="nav__wrapper">
           <label className="nav__label" htmlFor="nav__checkbox">
             <i className="nav__button fas fa-bars"></i>
@@ -75,5 +83,13 @@ class Nav extends React.Component {
     </div>);
   }
 }
+
+Nav.propTypes = {
+  isScrolled: PropTypes.bool,
+};
+
+Nav.defaultProps = {
+  isScrolled: false,
+};
 
 export default Nav;
