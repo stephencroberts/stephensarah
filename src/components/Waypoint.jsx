@@ -7,7 +7,8 @@ class Waypoint extends React.Component {
     this.waypoint = null;
     this.state = {
       offset: 0,
-      visible: false,
+      isVisible: false,
+      position: 'above',
     };
     this.checkWaypoint = this.checkWaypoint.bind(this);
   }
@@ -32,26 +33,42 @@ class Waypoint extends React.Component {
     }
   }
 
-  isElementVisible(el) {
-    const rect = el.getBoundingClientRect();
-    return (rect.top >= 0
-      && rect.left >= 0
-      && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-      && rect.right <= (window.innerWidth || document.documentElement.clientWidth));
-  }
-
   checkWaypoint() {
-    const isVisible = this.isElementVisible(this.waypoint);
-    if (isVisible === true && this.state.visible === false) {
-      this.setState({ visible: true });
-      if (typeof this.props.onVisibilityChange === 'function') {
-        this.props.onVisibilityChange(true);
-      }
-    } else if (isVisible === false && this.state.visible === true) {
-      this.setState({ visible: false });
-      if (typeof this.props.onVisibilityChange === 'function') {
-        this.props.onVisibilityChange(false);
-      }
+    let isVisible = null;
+    let position = null;
+
+    const waypointRect = this.waypoint.getBoundingClientRect();
+    const isWaypointVisible = waypointRect.top >= 0
+      && waypointRect.left >= 0
+      && waypointRect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      && waypointRect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+    if (isWaypointVisible === true && this.state.isVisible === false) {
+      isVisible = true;
+    } else if (isWaypointVisible === false && this.state.isVisible=== true) {
+      isVisible = false;
+    }
+
+    if (waypointRect.top > document.documentElement.scrollTop
+      && this.state.position !== 'above') {
+      position = 'above';
+    } else if (waypointRect.top < document.documentElement.scrollTop
+      && this.state.position !== 'below') {
+      position = 'below';
+    }
+
+    if (isVisible !== null || position !== null) {
+      this.setState(prevState => ({
+        isVisible: isVisible === null ? prevState.isVisible: isVisible,
+        position: position === null ? prevState.position : position,
+      }), () => {
+        if (typeof this.props.onVisibilityChange === 'function') {
+          this.props.onVisibilityChange({
+            isVisible: this.state.isVisible,
+            position: this.state.position,
+          });
+        }
+      });
     }
   }
 

@@ -20,14 +20,16 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isHeroVisible: true,
+      isHeroVisible: false,
     };
 
     this.handleWaypointVisibility = this.handleWaypointVisibility.bind(this);
   }
 
-  handleWaypointVisibility(isVisible) {
-    this.setState({ isHeroVisible: isVisible });
+  handleWaypointVisibility({ isVisible, position }) {
+    if (position === 'above' || isVisible) {
+      this.setState({ isHeroVisible: false });
+    }
   }
 
   render() {
