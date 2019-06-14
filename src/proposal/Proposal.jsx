@@ -8,7 +8,7 @@ class Proposal extends Component {
     return (
       <div id="proposal" className="proposal">
         <h2>The Proposal</h2>
-        <div className="section copy--justified">
+        <div className="copy--justified">
           <p>It was a perfect Saturday morning when Sarah and Stephen headed out
             to Loveland (aptly named!) Ski Area to hit the slopes. Although Sarah
             knew a proposal was imminent, she did not know the time nor place. They
