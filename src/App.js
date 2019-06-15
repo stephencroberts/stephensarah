@@ -59,7 +59,7 @@ class App extends Component {
           </div>
           <div className="wrapper--full-width">
             <article className="section">
-              <h3>Ceremony & Reception</h3>
+              <h2>Ceremony & Reception</h2>
               <p>Our wedding is on Saturday, September 7 at 4:00 p.m. at Our Savior's Way Lutheran Church, 43115 Waxpool Road, Ashburn, Virginia  20148.</p>
               <p>Dinner and dance to follow at Clyde's Willow Creek Farm, 42920 Broadlands Boulevard, Broadlands, Virginia.</p>
            </article>
