@@ -11,6 +11,7 @@ class Proposal extends Component {
       <div id="proposal" className="proposal">
         <h2>The Proposal</h2>
         <div className="proposal__copy">
+          <img alt="Dinner" src={dinner} />
           <p>It was a perfect Saturday morning when Sarah and Stephen headed out
             to Loveland (aptly named!) Ski Area to hit the slopes. Although Sarah
             knew a proposal was imminent, she did not know the time nor place. They
@@ -20,9 +21,9 @@ class Proposal extends Component {
             of the proposal, looking for the right spot, mentally rehearsing the
             steps and making sure the timing would fit.
           </p>
-          <img alt="Dinner" src={dinner} />
         </div>
         <div className="proposal__copy">
+          <img alt="Mountains" src={mountains} />
           <p>The plan was set. Sarah would
             certainly want to do another warm-up, and Stephen knew, or hoped, that
             everything would go smoothly. Up they went for another run at Ptarmigan,
@@ -34,7 +35,6 @@ class Proposal extends Component {
             gave her an awkward wave, and trying to remember which knee to put down,
             well...
           </p>
-          <img alt="Mountains" src={mountains} />
         </div>
 
         <p>if a picture is worth a thousand words, then a video is worth a
