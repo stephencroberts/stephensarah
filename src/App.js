@@ -45,9 +45,7 @@ class App extends Component {
             </div>
           </div>
           <div className="wrapper--full-width">
-            <div className="section">
-              <Travel />
-            </div>
+            <Travel />
           </div>
           <div className="wrapper--full-width">
             <div className="section">
