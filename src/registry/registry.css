@@ -1,3 +1,31 @@
+.registry__copy {
+  margin-bottom: 100px;
+}
+
+.registry__copy > * {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .registry__copy {
+    display: flex;
+    align-items: center;
+  }
+
+  .registry__copy > * {
+    width: 50%;
+  }
+
+  .registry__copy > *:first-child {
+    margin-right: 20px;
+  }
+
+  .registry__copy > *:last-child {
+    margin-left: 20px;
+  }
+}
+
 .registry__button-wrapper {
   text-align: center;
 }
@@ -6,7 +34,7 @@
   display: inline-block;
   padding: 20px;
   border-radius: 5px;
-  background-color: rgb(75, 188, 175);
+  background: linear-gradient(45deg, rgba(8,88,153,1) 0%, rgba(49,131,194,1) 100%);
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
