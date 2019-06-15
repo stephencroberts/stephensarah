@@ -2,6 +2,53 @@
   text-align: center;
 }
 
+.proposal__copy {
+  margin: 40px 0;
+  text-align: justify;
+}
+
+.proposal__copy > * {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.proposal__copy > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .proposal__copy {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .proposal__copy > * {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .proposal__copy:nth-child(odd) > *:first-child {
+    padding-right: 20px;
+  }
+
+  .proposal__copy:nth-child(odd) > *:last-child {
+    padding-left: 20px;
+  }
+
+  .proposal__copy:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .proposal__copy:nth-child(even) > *:first-child {
+    padding-left: 20px;
+  }
+
+  .proposal__copy:nth-child(even) > *:last-child {
+    padding-right: 20px;
+  }
+}
+
 .proposal__video {
   width: 100%;
   max-width: 1024px;
