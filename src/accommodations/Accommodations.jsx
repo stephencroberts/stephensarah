@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Hotel from './Hotel';
+import embassySuites from './embassy-suites.jpg';
+import homewoodSuites from './homewood-suites.jpg';
 
 import './accommodations.css';
 
@@ -41,14 +43,14 @@ shuttle service to/from Dulles airport.</p>
       address="44610 Waxpool Rd, Ashburn, VA 20147"
       bookingLink="https://embassysuites.hilton.com/en/es/groups/personalized/W/WASNLES-MRW-20190905/index.jhtml?WT.mc_id=POG"
       detailsLink="https://embassysuites3.hilton.com/en/hotels/virginia/embassy-suites-by-hilton-dulles-north-loudoun-WASNLES/index.html"
-      image="https://embassysuites3.hilton.com/resources/media/es/WASNLES/en_US/img/shared/full_page_image_gallery/main/ES_exterior001_712x342_FitToBoxSmallDimension_Center.jpg"
+      image={embassySuites}
       name="Embassy Suites by Hilton Dulles North Loudoun"
     />
     <Hotel
       address="44620 Waxpool Rd, Ashburn, VA 20147"
       bookingLink="https://homewoodsuites.hilton.com/en/hw/groups/personalized/W/WASLDHW-MRW-20190905/index.jhtml?WT.mc_id=POG"
       detailsLink="https://homewoodsuites3.hilton.com/en/hotels/virginia/homewood-suites-by-hilton-dulles-north-loudoun-WASLDHW/index.html"
-      image="https://homewoodsuites3.hilton.com/resources/media/hw/WASLDHW/en_US/img/shared/full_page_image_gallery/main/HG_exterior_11_505x305_FitToBoxSmallDimension_Center.jpg"
+      image={homewoodSuites}
       name="Homewood Suites by Hilton Dulles North Loudoun"
     />
   </div>
